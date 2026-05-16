@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+   <!-- bootstrap link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>What's For Dinner</title>
+</head>
+
+<body>
+
+  <header id="header" class="bg-white border-bottom shadow-sm border-orange-subtle fixed-top top-0 mb-5">
+    <div class="container py-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="logo-icon d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-utensils" style="color: rgb(255, 255, 255);"></i>
+          </div>
+
+          <div>
+            <h1 class="fw-bold mb-0 fs-4 text-dark">
+              What's For Dinner
+            </h1>
+            <p class="text-secondary mb-0 small">
+              Your daily meal inspiration
+            </p>
+          </div>
+        </div>
+        <!-- Desktop Nav -->
+        <div class="d-none d-md-flex align-items-center gap-4">
+          <button class="btn p-0 nav-btn">
+            <i class="fa-solid fa-bookmark fs-5"></i>
+          </button>
+          <button class="btn p-0 nav-btn">
+            <i class="fa-solid fa-clock-rotate-left fs-5"></i>
+          </button>
+          <button class="btn p-0 nav-btn">
+            <i class="fa-solid fa-gear fs-5"></i>
+          </button>
+          <img
+            src="./images/avatar-4.jpg"
+            alt="Profile"
+            class="rounded-circle profile-img"
+          />
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="btn p-0 nav-btn d-md-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobileMenu"
+        >
+          <i class="fa-solid fa-bars fs-3"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="collapse d-md-none border-top pt-4 mt-4" id="mobileMenu">
+        <div class="d-flex flex-column gap-3">
+          <button class="btn d-flex align-items-center gap-3 nav-btn">
+            <i class="fa-solid fa-bookmark"></i>
+            <span>Saved Recipes</span>
+          </button>
+          <button class="btn d-flex align-items-center gap-3 nav-btn">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>Recent</span>
+          </button>
+          <button class="btn d-flex align-items-center gap-3 nav-btn">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+          </button>
+          <button class="btn d-flex align-items-center gap-3 nav-btn">
+            <img
+              src="./images/avatar-4.jpg"
+              alt="Profile"
+              class="rounded-circle mobile-profile-img"
+            />
+            <span>Profile</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- recipe -->
+   <section id="recipe-section" class="pt-5 mt-4">
+   <div class="container">
+
+  <div class="recipe-card rounded-4">
+
+    <div class="row g-0">
+
+      <!-- LEFT -->
+      <div class="col-lg-5 position-relative">
+
+        <img
+          id="recipe-image"
+          class="w-100 recipe-image"
+          src=""
+          alt=""
+        >
+
+        <!-- Rating -->
+        <div
+          class="rating-box position-absolute bg-white rounded-pill px-3 py-2 shadow-sm d-flex align-items-center gap-2"
+        >
+          <i class="fa-solid fa-star text-warning"></i>
+
+          <span class="fw-bold" id="rating">
+            4.5
+          </span>
+
+          <span
+            class="text-secondary small"
+            id="reviews"
+          >
+            (100 reviews)
+          </span>
+        </div>
+
+        <!-- Stats -->
+        <div
+          class="stats-box position-absolute p-4 shadow-sm"
+        >
+
+          <div class="row text-center">
+
+            <div class="col-4">
+
+              <i
+                class="fa-solid fa-clock text-warning fs-3 mb-2"
+              ></i>
+
+              <p class="text-secondary mb-1">
+                Prep Time
+              </p>
+
+              <h5
+                class="fw-bold"
+                id="prep-time"
+              >
+                10 min
+              </h5>
+
+            </div>
+
+            <div class="col-4">
+
+              <i
+                class="fa-solid fa-fire-burner text-danger fs-3 mb-2"
+              ></i>
+
+              <p class="text-secondary mb-1">
+                Cook Time
+              </p>
+
+              <h5
+                class="fw-bold"
+                id="cook-time"
+              >
+                5 min
+              </h5>
+
+            </div>
+
+            <div class="col-4">
+
+              <i
+                class="fa-solid fa-users text-primary fs-3 mb-2"
+              ></i>
+
+              <p class="text-secondary mb-1">
+                Servings
+              </p>
+
+              <h5
+                class="fw-bold"
+                id="servings"
+              >
+                2 people
+              </h5>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-lg-7">
+
+        <div class="recipe-content">
+
+          <!-- Header -->
+          <div
+            class="d-flex justify-content-between align-items-start flex-wrap gap-4 mb-5"
+          >
+
+            <div>
+
+              <div class="d-flex gap-2 mb-3">
+
+                <span
+                  class="badge rounded-pill text-bg-success-subtle badge-green text-success px-3 py-2"
+                  id="difficulty"
+                >
+                  Easy
+                </span>
+
+                <span
+                  class="badge rounded-pill text-bg-primary-subtle badge-blue text-primary px-3 py-2"
+                  id="category"
+                >
+                  Italian
+                </span>
+
+              </div>
+
+              <h1
+                class="fw-bolder h1 "
+                id="recipe-name"
+              >
+                Recipe Name
+              </h1>
+
+              <p
+                class="text-secondary fs-5"
+                id="recipe-description"
+              >
+              </p>
+
+              <div
+                id="recipe-warning"
+                class="alert alert-warning d-none mt-4"
+                role="alert"
+              >
+              </div>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-2">
+
+              <button class="icon-btn">
+                <i class="fa-solid fa-bookmark"></i>
+              </button>
+
+              <button class="icon-btn">
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+          <!-- Tabs -->
+          <div
+            class="d-flex justify-content-between border-bottom pb-3 mb-4 flex-wrap gap-3"
+          >
+
+            <button class="tab-btn active">
+              <i class="fa-solid fa-list-check me-2"></i>
+              Ingredients
+            </button>
+
+            <button class="tab-btn">
+              <i class="fa-solid fa-book-open me-2"></i>
+              Instructions
+            </button>
+
+            <button class="tab-btn">
+              <i class="fa-solid fa-chart-pie me-2"></i>
+              Nutrition
+            </button>
+
+            <button class="tab-btn">
+              <i class="fa-solid fa-lightbulb me-2"></i>
+              Chef's Tips
+            </button>
+
+          </div>
+
+          <!-- Ingredients -->
+          <div
+            class="ingredients-box p-4 mb-5 tab-content"
+            id="ingredients-list"
+          >
+          </div>
+
+          <!-- Instructions -->
+          <div
+            class="instructions-box p-4 mb-5 tab-content d-none"
+            id="instructions-list"
+          >
+          </div>
+
+          <!-- Nutrition -->
+          <div
+            class="nutrition-box p-4 mb-5 tab-content d-none"
+            id="nutrition-list"
+          >
+          </div>
+
+          <!-- Chef's Tips -->
+          <div
+            class="tips-box p-4 mb-5 tab-content d-none"
+            id="tips-list"
+          >
+          </div>
+
+          <!-- Button -->
+          <button
+            class="try-btn"
+            id="try-btn"
+          >
+
+            <i class="fa-solid fa-rotate me-2"></i>
+
+            Try Another Recipe
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+
+  
+  <!-- JS link -->
+  <script src="./js/main.js"></script>
+  <!-- JS bootstrap link -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
